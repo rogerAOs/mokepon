@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>mokepon</title>
+    
+</head>
+<body>
+
+    <h1 class="titulo">MOKEPON</h1>
+    
+    <div class="contenedor_seleccionar">
+        <section id="seleccionar-mascota">
+            <h2 class="eleguir_mascota">elige tu mascota: </h2>
+
+            <div class="contenedor_mascota">
+                
+                <input type="radio" name="mascota" id="hipodoge">
+                <label class="contenedor_hipodoge" for="hipodoge">
+                    <img src="hipodogue.png" alt="" class="hipodogue">
+                    <p class="nombre">hipodoge</p>
+                </label>
+                
+                <input type="radio" name="mascota" id="capipepo">
+                <label  class="contenedor_capipepo" for="capipepo">
+                    <img src="capipepo.png" alt="" class="capipepo">
+                    <p class="nombre">capipepo</p>
+                </label>
+                
+                <input type="radio" name="mascota" id="ratigueya">
+                <label class="contenedor_ratigueya" for="ratigueya">
+                    <img src="ratigueya.png" alt="" class="ratigueya">
+                    <p class="nombre">ratigueya</p>
+                </label>
+
+            </div>
+
+             <br>
+             <div>
+                <button id="boton_mascota">
+                <span></span>
+                <span></span>
+                SELECCIONAR</button>
+            </div>
+        </section>
+    </div>
+
+<!-- SELECCIONAR ATAQUE -->
+
+    <section id="seleccionar-ataque">
+       <h2 class="eleguir_ataque">elige tu ataque: </h2>
+       <div class="contenedor_eleguir_ataque">
+            <div class="botones">
+                <button id="boton_fuego"> <span></span> <span></span>FUEGO 🔥</button>
+                <button id="boton_agua"> <span></span> <span></span>AGUA 💦</button>
+                <button id="boton_tierra"> <span></span> <span></span>TIERRA 🌱</button>
+            </div>
+
+            <div class="contenedor_mensaje">
+                <div id="mensaje_final">
+                    <p id="mensajeBatallaFinal"></p>
+                </div>
+
+                <section id="reiniciar">
+                    <button id="boton_reiniciar"> <span></span> <span></span>reiniciar</button>
+                </section>
+            </div>
+        </div>
+       <div class="contenedor_ataque">
+            <div class="contenedor_ataque_mascota">
+                <p class="vidas_amigo">mascota <span id="vidas_jugador"> ❤️❤️❤️</span></p>
+        
+                <div id="imagen_jugador"></div>
+                <span id="mascota_jugador"></span>
+
+                <section id="mensajes">
+                    
+                </section>
+
+            </div>
+            
+            <div class="contenedor_ataque_enemigo">
+                <p class="vidas_enemigo">enemigo  <span id="vidas_enemigo"> ❤️❤️❤️</span></p>
+        
+                <div id="imagen_enemigo"></div>
+                <span id="mascota_enemigo"></span>
+
+                <section id="mensajes_enemigo">
+                    
+                </section>
+            </div>
+       </div>
+       
+       
+    </section>
+
+    <script src="codigo.js"></script>
+    <script src="nieve.js"></script>
+</body>
+</html>

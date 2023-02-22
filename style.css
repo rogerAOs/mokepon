@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Contrail+One&family=Niconne&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Contrail One', cursive;
+}
+html{
+    background-image: url(fondo_pokemon.jpg);
+    background-repeat: no-repeat;
+}
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo{
+    margin-top: 39px;
+    text-shadow: 0 0 15px black, 0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black;
+    color: aqua;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Contrail One', cursive;
+}
+.hipodogue{
+    width: 250px;
+    height: 250px;
+    
+}
+.capipepo{
+    width: 250px;
+    height: 250px;
+}
+.ratigueya{
+    width: 250px;
+    height: 250px;
+}
+.eleguir_mascota{
+    margin: 19px;
+    font-family: 'Contrail One', cursive;
+    text-shadow: 0 0 15px black, 0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black;
+    color: rgb(255, 0, 132);
+    font-size: 40px;
+}
+ 
+.contenedor_mascota{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contenedor_hipodoge{
+    transition: .20s;
+    display: inline-block;
+    background: linear-gradient(rgb(0, 170, 255),rgb(0, 255, 213));
+    margin: 10px;
+
+}
+
+.contenedor_capipepo{
+    transition: .20s;
+    display: inline-block;
+    background: linear-gradient(rgb(106, 120, 148),rgb(147, 231, 218));
+    margin: 10px;
+    
+}
+
+.contenedor_ratigueya{
+    transition: .20s;
+    display: inline-block;
+    background: linear-gradient(rgb(185, 125, 188),rgb(242, 224, 247));
+    margin: 10px;
+    
+}
+
+.contenedor_hipodoge:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 15px #8EC3B0;
+    animation: anima 2s ;
+    
+}
+
+.contenedor_ratigueya:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 15px #8EC3B0;
+    animation: anima 2s ;
+}
+
+.contenedor_capipepo:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 15px #8EC3B0;
+    animation: anima 2s ;
+}
+@keyframes anima{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+input{
+    display: none;
+}
+input:checked +label{
+    box-shadow: 0px 0px 10px 10px #8EC3B0;
+ }
+
+.nombre{
+    font-family: 'Contrail One', cursive;
+    padding: 5px;
+    display: block;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+/* botones */
+#boton_mascota,
+#boton_reiniciar {
+    margin: auto;
+    font-family: 'Contrail One', cursive;
+    margin: 10px;
+    position: relative;
+    padding: 12px 25px;
+    border: none;
+    outline: none;
+    background: #646166;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+}
+
+#boton_mascota:hover,
+#boton_reiniciar:hover {
+    background-color: rgb(39, 40, 40);
+
+}
+
+#boton_mascota span,
+#boton_reiniciar span {
+    position: absolute;
+    background: #fff;
+    transition: .5s;
+}
+
+#boton_mascota span:nth-child(1),
+#boton_reiniciar span:nth-child(1){
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: -100%;
+}
+
+#boton_mascota span:nth-child(2),
+#boton_reiniciar span:nth-child(2){
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    right: -100%;
+}
+
+#boton_mascota:hover span:nth-child(1),
+#boton_reiniciar:hover span:nth-child(1) {
+    left: 0;
+    box-shadow: 0 0 6px rgb(255, 255, 255);
+}
+
+#boton_mascota:hover span:nth-child(2),
+#boton_reiniciar:hover span:nth-child(2) {
+    right: 0;
+    box-shadow: 0 0 6px rgb(255, 255, 255);
+}
+
+#mascota_jugador,
+#mascota_enemigo{
+    display: block;
+    font-family: 'Contrail One', cursive;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+/* contenedor ataque */
+.contenedor_ataque{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+}
+.vidas_amigo,
+.vidas_enemigo{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Contrail One', cursive;
+    padding: 4px;
+}
+.contenedor_eleguir_ataque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+}
+
+/* SELECCIONAR ATAQUE */
+
+.eleguir_ataque{
+    text-align: center;
+    text-shadow: 0 0 15px black, 0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black,0 0 15px black;
+    color: rgb(255, 0, 132);
+    font-size: 40px;
+    font-weight: 800;
+    font-family: 'Contrail One', cursive;
+    
+}
+.contenedor_ataque_mascota{
+    display: inline-block;
+    max-width: 300px;
+    min-width: 100px;
+}
+.contenedor_ataque_enemigo{
+    display: inline-block;
+    max-width: 300px;
+    min-width: 100px;
+}
+
+.imagen_mascota_javascript{
+    width: 100%;
+}
+#imagen_jugador{
+    background: linear-gradient(rgb(106, 120, 148),rgb(147, 231, 218));
+
+}
+#imagen_enemigo{
+    background: linear-gradient(rgb(185, 125, 188),rgb(242, 224, 247));
+}
+#mensajes_amigo,
+#mensajes_enemigo{
+    background-color: #84818190;
+    color: #000000;
+}
+/* BOTON FUEGO */
+
+#boton_fuego, #boton_agua, #boton_tierra {
+    margin: auto;
+    font-family: 'Contrail One', cursive;
+    margin: 10px;
+    position: relative;
+    width: 20%;
+    padding: 6px 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    text-shadow: 0 0 6px black, 0 0 6px black, 0 0 6px black,0 0 6px black;
+    transition: .5s;
+    overflow: hidden;
+}
+#boton_fuego{
+    background-color: #987c0a;
+    
+}
+#boton_agua{
+    background-color: #045993;
+}#boton_tierra{
+    background-color: #646166;
+}
+#boton_fuego:hover {
+    background-color: rgb(80, 73, 1);
+    box-shadow: 0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255);
+
+}
+#boton_agua:hover {
+    background-color: rgb(25, 48, 83);
+    box-shadow: 0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255);
+
+}
+#boton_tierra:hover {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255);
+
+}
+
+#boton_fuego span,
+#boton_agua span,
+#boton_tierra span {
+    position: absolute;
+    transition: .5s;
+}
+#boton_fuego span{
+    background-color: #c8a20c;
+}
+#boton_agua span{
+    background-color: #0674bd;
+}
+#boton_tierra span{
+    background-color: #918f92;
+}
+#boton_fuego span:nth-child(1),
+#boton_agua span:nth-child(1),
+#boton_tierra span:nth-child(1) {
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: -100%;
+}
+
+#boton_fuego span:nth-child(2),
+#boton_agua span:nth-child(2),
+#boton_tierra span:nth-child(2) {
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    right: -100%;
+}
+
+#boton_fuego:hover span:nth-child(1),
+#boton_agua:hover span:nth-child(1),
+#boton_tierra:hover span:nth-child(1) {
+    left: 0;
+    box-shadow: 0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255);
+
+}
+
+#boton_fuego:hover span:nth-child(2),
+#boton_agua:hover span:nth-child(2),
+#boton_tierra:hover span:nth-child(2)  {
+    right: 0;
+    box-shadow: 0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255),0 0 6px rgb(255, 255, 255);
+
+}
+
+p{
+    color: #000000;
+}
+/* mensajes de resultado de juego */
+
+#mensajes_enemigo{
+    background: linear-gradient(rgb(185, 125, 188),rgb(242, 224, 247));
+    color: #ffffff;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    text-shadow: 0 0 10px rgb(0, 0, 0),0 0 10px rgb(0, 0, 0),0 0 10px rgb(0, 0, 0),0 0 10px rgb(0, 0, 0);
+    font-family: 'Contrail One', cursive;
+    
+}
+#mensajes{
+    background: linear-gradient(rgb(106, 120, 148),rgb(147, 231, 218));
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(0, 0, 0),0 0 10px rgb(0, 0, 0),0 0 10px rgb(0, 0, 0),0 0 10px rgb(0, 0, 0);
+    font-family: 'Contrail One', cursive;
+}
+.contenedor_mensaje{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(106, 120, 148, 0.821);
+    border-radius: 10px;
+    border: 2px solid rgb(106, 120, 148);
+    box-shadow: 0 0 10px rgb(106, 120, 148), 0 0 10px rgb(106, 120, 148), 0 0 10px rgb(106, 120, 148), 0 0 10px rgb(106, 120, 148);
+}
+/* nieve */
+i {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    border-radius: 50% 0 50% 0;
+    box-shadow: 0px 0px 19px 0px rgb(152, 210, 255);
+    top: -17px;
+    animation: nieve linear infinite;
+}
+
+@keyframes nieve {
+    0% {
+        top: -17px;
+    }
+    100% {
+        top: calc(100vh + 50px);
+    }
+}
